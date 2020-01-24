@@ -5,4 +5,8 @@
     <string name="title_chat">Chats</string>
     <string name="title_account">Account</string>
     <string name="title_notification">Notifications</string>
+
+    <string name="your_location">Your Location</string>
+    <string name="it_is_location">Current Location</string>
+    <string name="label_actionbar">Label</string>
 </resources>
