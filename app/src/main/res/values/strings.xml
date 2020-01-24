@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">BoxPrintAndroid</string>
     <string name="title_home">Home</string>
-    <string name="title_order">Order</string>
-    <string name="title_chat">Chat</string>
+    <string name="title_order">Orders</string>
+    <string name="title_chat">Chats</string>
     <string name="title_account">Account</string>
+    <string name="title_notification">Notifications</string>
 </resources>

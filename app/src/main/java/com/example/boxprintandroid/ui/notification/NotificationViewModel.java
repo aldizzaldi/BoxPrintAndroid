@@ -1,16 +1,16 @@
-package com.example.boxprintandroid.ui.account;
+package com.example.boxprintandroid.ui.notification;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class AccountViewModel extends ViewModel {
+public class NotificationViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public AccountViewModel() {
+    public NotificationViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Account fragment");
+        mText.setValue("This is notification fragment");
     }
 
     public LiveData<String> getText() {

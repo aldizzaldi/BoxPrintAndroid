@@ -1,4 +1,4 @@
-package com.example.boxprintandroid.ui.account;
+package com.example.boxprintandroid.ui.notification;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.boxprintandroid.R;
 
-public class AccountFragment extends Fragment {
+public class NotificationFragment extends Fragment {
 
-    private AccountViewModel accountViewModel;
+    private NotificationViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        accountViewModel =
-                ViewModelProviders.of(this).get(AccountViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_account, container, false);
-        final TextView textView = root.findViewById(R.id.text_account);
-        accountViewModel.getText().observe(this, new Observer<String>() {
+        homeViewModel =
+                ViewModelProviders.of(this).get(NotificationViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_notification, container, false);
+        final TextView textView = root.findViewById(R.id.text_notification);
+        homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
