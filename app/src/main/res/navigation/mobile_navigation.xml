@@ -29,10 +29,5 @@
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
 
-    <fragment
-        android:id="@+id/navigation_notification"
-        android:name="com.example.boxprintandroid.ui.notification.NotificationFragment"
-        android:label="@string/title_notification"
-        tools:layout="@layout/fragment_notification" />
 
 </navigation>
