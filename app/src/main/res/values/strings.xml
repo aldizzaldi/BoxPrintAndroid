@@ -11,4 +11,16 @@
     <string name="label_actionbar">Label</string>
     <string name="titleProduct">Poster A3 Doff</string>
     <string name="titlePrice">Rp10.000</string>
+    
+    //Store
+    <string name="name">This is name</string>
+    <string name="address">Address</string>
+    <string name="rate">Rate</string>
+    <string name="open">open</string>
+    <string name="start">Start</string>
+    <string name="until">-</string>
+    <string name="end">End</string>
+    <string name="title_category">Category</string>
+    <string name="details_product">Cetak per lembar minimal 10 halaman</string>
+    
 </resources>
