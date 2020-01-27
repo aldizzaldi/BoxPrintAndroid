@@ -22,5 +22,10 @@
     <string name="end">End</string>
     <string name="title_category">Category</string>
     <string name="details_product">Cetak per lembar minimal 10 halaman</string>
+
+    //Account
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="title_my_product">Produk Saya</string>
+    <string name="title_logout">Keluar</string>
     
 </resources>
