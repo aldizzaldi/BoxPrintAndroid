@@ -27,5 +27,9 @@
     <string name="title_edit_profile">Edit Profile</string>
     <string name="title_my_product">Produk Saya</string>
     <string name="title_logout">Keluar</string>
+
+    //List Item
+    <string name="item_name">Nama Item</string>
+    <string name="price">Price</string>
     
 </resources>
