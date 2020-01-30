@@ -31,5 +31,8 @@
     //List Item
     <string name="item_name">Nama Item</string>
     <string name="price">Price</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="with_cardview">with CardView</string>
     
 </resources>
