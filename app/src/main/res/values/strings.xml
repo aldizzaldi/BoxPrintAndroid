@@ -27,5 +27,7 @@
     <string name="title_edit_profile">Edit Profile</string>
     <string name="title_my_product">Produk Saya</string>
     <string name="title_logout">Keluar</string>
+
+    //Chat
     
 </resources>
