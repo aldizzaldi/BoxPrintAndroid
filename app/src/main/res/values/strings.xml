@@ -34,5 +34,9 @@
     <string name="list">List</string>
     <string name="grid">Grid</string>
     <string name="with_cardview">with CardView</string>
-    
+
+    //View Product
+    <string name="order">Order</string>
+    <string name="place">Theater Print 2</string>
+
 </resources>
