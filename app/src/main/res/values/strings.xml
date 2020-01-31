@@ -35,8 +35,18 @@
     <string name="grid">Grid</string>
     <string name="with_cardview">with CardView</string>
 
-    //View Product
-    <string name="order">Order</string>
-    <string name="place">Theater Print 2</string>
+    //Edit Profile
+    <string name="label_name">Name</string>
+    <string name="label_username">Username</string>
+    <string name="label_email">Email</string>
+    <string name="label_password">Password</string>
+    <string name="label_set_location">Set Location</string>
+    <string name="label_open">Open</string>
+    <string name="label_button_save">SAVE</string>
 
+    //Chat
+    <string name="name_chat">Name</string>
+    <string name="chat">Hai lorem ipsum dolor sit amet</string>
+    <string name="time_chat">19.08</string>
+    
 </resources>
