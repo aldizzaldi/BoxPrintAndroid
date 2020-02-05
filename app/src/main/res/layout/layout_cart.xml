@@ -45,16 +45,16 @@
         android:layout_marginTop="4dp"
         android:text="File sudah terunggah"
         app:layout_constraintStart_toEndOf="@+id/img_item_cart"
-        app:layout_constraintTop_toBottomOf="@+id/textView18" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_cart" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/txt_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
         android:layout_marginTop="36dp"
         android:text="@string/titlePrice"
-        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintStart_toEndOf="@+id/txt_title_cart"
         app:layout_constraintTop_toBottomOf="@+id/img_red_cart" />
 
     <ImageView
@@ -68,7 +68,7 @@
         app:srcCompat="@drawable/banneer" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/txt_title_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -77,47 +77,36 @@
         app:layout_constraintStart_toEndOf="@+id/img_item_cart"
         app:layout_constraintTop_toBottomOf="@+id/txt_cart" />
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="15dp"
-        android:layout_height="15dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/textView21"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:srcCompat="@drawable/minus" />
-
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/txt_jum_item"
         android:layout_width="8dp"
         android:layout_height="15dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="8dp"
         android:foregroundGravity="center_vertical"
         android:gravity="center|start"
         android:text="2"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+        app:layout_constraintStart_toEndOf="@+id/img_plus"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/img_minus_cart"
         android:layout_width="15dp"
         android:layout_height="15dp"
-        android:layout_marginStart="108dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/txt_file_unggah"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"
-        app:srcCompat="@drawable/plus_button" />
-
-    <View
-        android:id="@+id/line"
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:background="#E6E6E6"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toBottomOf="@+id/textView20"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageView
+        android:id="@+id/img_plus"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_file_unggah"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price"
+        app:srcCompat="@drawable/plus_button" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
