@@ -49,4 +49,20 @@
     <string name="chat">Hai lorem ipsum dolor sit amet</string>
     <string name="time_chat">19.08</string>
     
+    //Signup
+    <string name="label_welcome">Welcome.</string>
+    <string name="description_sign_up">Create a new account</string>
+    <string name="slogan">make your work easier</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_pass">Confirm Password</string>
+    <string name="button_sign_up">Sign Up</string>
+    <string name="question_sign_up">Already have an account ?</string>
+
+    //Login
+    <string name="button_login">Login</string>
+    <string name="label_welcome_back">Welcome Back.</string>
+    <string name="question_login">Haven't an account ?</string>
+    
 </resources>
