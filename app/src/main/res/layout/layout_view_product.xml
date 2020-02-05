@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/img_btn_order"
+        android:layout_width="295dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="652dp"
+        android:text="Order"
+        app:layout_constraintStart_toEndOf="@+id/img_btn_chat"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_view_product"
+        android:layout_width="145dp"
+        android:layout_height="141dp"
+        android:layout_marginStart="16dp"
+        android:foregroundGravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446"
+        app:srcCompat="@drawable/banneer" />
+
+    <TextView
+        android:id="@+id/txt_title_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="296dp"
+        android:text="@string/titleProduct"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_view_product"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_price_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="@string/price"
+        android:textColor="#3F51B5"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_view_product"
+        app:layout_constraintTop_toBottomOf="@+id/txt_title_view" />
+
+    <TextView
+        android:id="@+id/txt_place_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:text="Theater Print 2"
+        android:textColor="#000000"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/img_view_product"
+        app:layout_constraintTop_toBottomOf="@+id/txt_price_view" />
+
+    <TextView
+        android:id="@+id/txt_desc_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Description :"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_view_product" />
+
+    <TextView
+        android:id="@+id/txt_detail_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Cetak per lembar poster"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_desc_view" />
+
+    <TextView
+        android:id="@+id/txtFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:text="Upload File : "
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_desc" />
+
+    <TextView
+        android:id="@+id/txt_format_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="format pdf/docs/png/jpeg"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@+id/txtFile"
+        app:layout_constraintTop_toBottomOf="@+id/txt_detail_desc" />
+
+    <Button
+        android:id="@+id/btn_upload_file"
+        android:layout_width="118dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
+        android:text="Choose File"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFile" />
+
+    <TextView
+        android:id="@+id/txt_file_unggah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="File sudah terunggah"
+        android:textColor="#4CAF50"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload_file" />
+
+    <ImageButton
+        android:id="@+id/img_btn_shopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949"
+        app:srcCompat="@drawable/ic_shopping_cart_black_24dp" />
+
+    <ImageButton
+        android:id="@+id/img_btn_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_btn_shopping"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.949"
+        app:srcCompat="@drawable/ic_chat_black_24dp" />
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="95dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="Upload"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/btn_upload_file"
+        app:layout_constraintTop_toBottomOf="@+id/txt_format_view" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_file_unggah"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload"
+        app:srcCompat="@drawable/plus_button" />
+
+    <TextView
+        android:id="@+id/txt_item_jum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="2"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="38dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/txt_item_jum"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload"
+        app:srcCompat="@drawable/minus" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
