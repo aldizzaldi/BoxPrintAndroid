@@ -62,7 +62,11 @@
 
     //Login
     <string name="button_login">Login</string>
+    <string name="description_login">Use your account to continue</string>
     <string name="label_welcome_back">Welcome Back.</string>
     <string name="question_login">Haven't an account ?</string>
+
+    //Started
+    <string name="tagline">Make Your Work Easier</string>
     
 </resources>
