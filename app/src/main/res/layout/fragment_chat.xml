@@ -6,9 +6,10 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/peopleChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:listitem="@layout/chat_item" />
+        tools:listitem="@layout/item_people_chat" />
 </androidx.constraintlayout.widget.ConstraintLayout>
