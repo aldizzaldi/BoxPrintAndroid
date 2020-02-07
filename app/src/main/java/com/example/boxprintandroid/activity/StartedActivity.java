@@ -15,10 +15,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class StartedActivity extends AppCompatActivity {
 
-//    @BindView(R.id.buttonForLogin)
     Button btnLogin;
-
-//    @BindView(R.id.buttonForSignup)
     Button btnSignUp;
 
     private BottomSheetBehavior mBehavior;
@@ -29,7 +26,7 @@ public class StartedActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_started);
-//        ButterKnife.bind(this);
+
         btnLogin = findViewById(R.id.buttonForLogin);
         btnSignUp = findViewById(R.id.buttonForSignup);
 
@@ -42,9 +39,14 @@ public class StartedActivity extends AppCompatActivity {
                 showBottomSheetLogin();
             }
         });
+        btnSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showBottomSheetSignup();
+            }
+        });
+
     }
-
-
 
     private void showBottomSheetLogin() {
         if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
@@ -67,4 +69,27 @@ public class StartedActivity extends AppCompatActivity {
             }
         });
     }
+
+    private void showBottomSheetSignup() {
+        if (mBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+            mBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        }
+
+        final View view = getLayoutInflater().inflate(R.layout.activity_signup, null);
+
+        mBottomSheetDialog = new BottomSheetDialog(this);
+        mBottomSheetDialog.setContentView(view);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            mBottomSheetDialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        }
+
+        mBottomSheetDialog.show();
+        mBottomSheetDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                mBottomSheetDialog = null;
+            }
+        });
+    }
+
 }

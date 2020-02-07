@@ -26,10 +26,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         btnLogin =  findViewById(R.id.buttonLogin);
+
         loginContainer = findViewById(R.id.signupActivity);
         signupContainer = findViewById(R.id.loginActivity);
+
         buttonSignup = findViewById(R.id.button_to_signup);
         buttonLogin = findViewById(R.id.button_to_login);
+
         buttonSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,13 +47,23 @@ public class LoginActivity extends AppCompatActivity {
                 signupContainer.setVisibility(View.GONE);
             }
         });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(i);
+
             }
         });
+
+        buttonSignup.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+
+            }
+        });
+
     }
 
 }
