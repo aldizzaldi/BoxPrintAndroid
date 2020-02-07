@@ -1,7 +1,8 @@
-package com.example.boxprintandroid;
+package com.example.boxprintandroid.activity;
 
 import android.os.Bundle;
 
+import com.example.boxprintandroid.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 R.id.navigation_home, R.id.navigation_order, R.id.navigation_chat, R.id.navigation_account)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
     }
 
