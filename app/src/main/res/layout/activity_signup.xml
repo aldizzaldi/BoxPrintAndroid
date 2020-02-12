@@ -5,156 +5,160 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/signupActivity"
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="550dp"
-        android:background="#000"
-        app:cardCornerRadius="25dp"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/signupActivity"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="550dp"
+            android:background="#000"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/button_to_login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="100dp"
-                android:clickable="true"
-                android:text="@string/button_login"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/questionOnSignup"
-                app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
-
-            <TextView
-                android:id="@+id/questionOnSignup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/question_sign_up"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
-
-            <EditText
-                android:id="@+id/inputEmail"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/edit_text_shape"
-                android:ems="10"
-                android:hint="@string/hint_email"
-                android:inputType="textEmailAddress"
-                android:padding="25px"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputName" />
+                android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/inputPassword2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/edit_text_shape"
-                android:ems="10"
-                android:hint="@string/hint_confirm_pass"
-                android:inputType="textPassword"
-                android:padding="25px"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+                <TextView
+                    android:id="@+id/button_to_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="100dp"
+                    android:clickable="true"
+                    android:text="@string/button_login"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/questionOnSignup"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
 
-            <EditText
-                android:id="@+id/inputName"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/edit_text_shape"
-                android:hint="@string/hint_name"
-                android:inputType="text"
-                android:padding="25px"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/welcome2" />
+                <TextView
+                    android:id="@+id/questionOnSignup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="100dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/question_sign_up"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonSignup" />
 
-            <TextView
-                android:id="@+id/welcome2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="4dp"
-                android:text="@string/description_sign_up"
-                android:textSize="18sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/welcome" />
+                <EditText
+                    android:id="@+id/inputEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:ems="10"
+                    android:hint="@string/hint_email"
+                    android:inputType="textEmailAddress"
+                    android:padding="25px"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputName" />
 
-            <TextView
-                android:id="@+id/welcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="32dp"
-                android:text="@string/label_welcome"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <EditText
+                    android:id="@+id/inputPassword2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:ems="10"
+                    android:hint="@string/hint_confirm_pass"
+                    android:inputType="textPassword"
+                    android:padding="25px"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
-            <EditText
-                android:id="@+id/inputPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/edit_text_shape"
-                android:ems="10"
-                android:hint="@string/hint_password"
-                android:inputType="textPassword"
-                android:padding="25px"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+                <EditText
+                    android:id="@+id/inputName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:hint="@string/hint_name"
+                    android:inputType="text"
+                    android:padding="25px"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/welcome2" />
 
-            <Button
-                android:id="@+id/buttonSignup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="50dp"
-                android:background="@drawable/button_shape_blue_rounded"
-                android:shadowColor="#FFFFFF"
-                android:text="@string/button_sign_up"
-                android:textAllCaps="false"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
+                <TextView
+                    android:id="@+id/welcome2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/description_sign_up"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/welcome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/label_welcome"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
+                <EditText
+                    android:id="@+id/inputPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/edit_text_shape"
+                    android:ems="10"
+                    android:hint="@string/hint_password"
+                    android:inputType="textPassword"
+                    android:padding="25px"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
-    </androidx.cardview.widget.CardView>
+                <Button
+                    android:id="@+id/buttonSignup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="50dp"
+                    android:background="@drawable/button_shape_blue_rounded"
+                    android:shadowColor="#FFFFFF"
+                    android:text="@string/button_sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inputPassword2" />
 
-
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
