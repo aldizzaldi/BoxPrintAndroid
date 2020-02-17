@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="480dp"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     app:behavior_hideable="false"
     app:behavior_peekHeight="0dp"
@@ -13,67 +12,68 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome Back"
-        android:textSize="25sp"
-        android:textColor="#000000"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Welcome Back"
+        android:textColor="#000000"
+        android:textSize="25sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/description_sign_up"
         android:layout_marginBottom="20dp"
-        android:textSize="18sp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/description_sign_up"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/inputNameSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/hint_name"
-        android:inputType="textPersonName"
-        android:padding="12.5dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/edit_text_shape"/>
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/hint_name"
+        android:inputType="textPersonName"
+        android:padding="12.5dp" />
 
     <EditText
         android:id="@+id/inputEmailSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/hint_email"
-        android:inputType="textPassword"
-        android:padding="12.5dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/edit_text_shape"/>
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/hint_email"
+        android:inputType="textPassword"
+        android:padding="12.5dp" />
 
     <EditText
         android:id="@+id/inputPasswordSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword"
-        android:padding="12.5dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/edit_text_shape"/>
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/hint_password"
+        android:inputType="textPassword"
+        android:padding="12.5dp" />
 
     <EditText
         android:id="@+id/inputConfirmPasswordSignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:hint="@string/hint_confirm_pass"
-        android:inputType="textPassword"
-        android:padding="12.5dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:background="@drawable/edit_text_shape"/>
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/edit_text_shape"
+        android:hint="@string/hint_confirm_pass"
+        android:inputType="textPassword"
+        android:padding="12.5dp" />
 
     <Button
         android:id="@+id/buttonSignup"
@@ -93,9 +93,9 @@
         android:id="@+id/txtsignupforlogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/question_sign_up"
         android:layout_marginBottom="20dp"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/question_sign_up" />
 
 
 </LinearLayout>
