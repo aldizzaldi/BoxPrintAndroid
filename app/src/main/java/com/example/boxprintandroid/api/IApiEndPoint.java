@@ -1,6 +1,7 @@
 package com.example.boxprintandroid.api;
 
-import com.example.boxprintandroid.model.LoginResponse;
+import com.example.boxprintandroid.model.response.LoginResponse;
+import com.example.boxprintandroid.model.response.RegisterResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -14,5 +15,14 @@ public interface IApiEndPoint {
     Call<LoginResponse> login(
             @Field("email") String emailUser,
             @Field("password") String passwordUser
+    );
+
+    @FormUrlEncoded
+    @POST("register")
+    Call<RegisterResponse> register(
+            @Field("nama") String nameUser,
+            @Field("email") String emailUser,
+            @Field("password") String passwordSignup,
+            @Field("c_password") String confirmPassword
     );
 }

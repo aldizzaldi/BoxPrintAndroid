@@ -1,4 +1,4 @@
-package com.example.boxprintandroid.ui.login;
+package com.example.boxprintandroid.ui;
 
 public interface ILoginView {
     void moveToHomepage();
