@@ -4,7 +4,7 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e6e6e6"
+    android:background="#FFFFF"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -25,7 +25,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:layout_margin="@dimen/spacing_middle"
                 android:clipToPadding="false"
-                app:cardBackgroundColor="@android:color/white"
+                app:cardBackgroundColor="#EEEEEE"
                 app:cardCornerRadius="2dp"
                 app:cardElevation="3dp">
 
@@ -38,7 +38,7 @@
                         android:layout_width="?attr/actionBarSize"
                         android:layout_height="?attr/actionBarSize"
                         android:background="@android:color/transparent"
-                        android:tint="#666666"
+                        android:tint="#000000"
                         app:srcCompat="@drawable/ic_search_grey" />
 
                     <EditText
@@ -47,7 +47,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
-                        android:hint="Search keywords"
+                        android:hint="Search Product"
                         android:imeOptions="actionSearch"
                         android:maxLines="1"
                         android:singleLine="true">
@@ -62,7 +62,7 @@
                         android:layout_height="?attr/actionBarSize"
                         android:background="@android:color/transparent"
                         android:clickable="true"
-                        android:tint="#666666"
+                        android:tint="#000000"
                         app:srcCompat="@drawable/ic_close" />
 
                 </LinearLayout>
