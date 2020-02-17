@@ -1,67 +1,88 @@
 package com.example.boxprintandroid.activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
 import com.example.boxprintandroid.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.boxprintandroid.data.LoginPresenter;
+import com.example.boxprintandroid.ui.ILoginView;
 
-public class LoginActivity extends AppCompatActivity {
-    Button btnLogin;
-    CardView loginContainer, signupContainer;
-    TextView buttonSignup, buttonLogin;
+
+public class LoginActivity extends AppCompatActivity implements ILoginView {
+    EditText emailLogin, passwordLogin;
+    Button buttonLogin;
+    TextView button_to_signup;
+
+    private LoginPresenter loginPresenter;
+    private ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        btnLogin =  findViewById(R.id.buttonLogin);
 
-        loginContainer = findViewById(R.id.signupActivity);
-        signupContainer = findViewById(R.id.loginActivity);
+        buttonLogin = findViewById(R.id.buttonLogin);
+        button_to_signup = findViewById(R.id.questionOnLogin);
+        emailLogin = findViewById(R.id.inputEmailLogin);
+        passwordLogin = findViewById(R.id.inputPasswordLogin);
 
-        buttonSignup = findViewById(R.id.button_to_signup);
-        buttonLogin = findViewById(R.id.button_to_login);
+        progressDialog = new ProgressDialog(this);
+        loginPresenter = new LoginPresenter(this);
 
-        buttonSignup.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                loginContainer.setVisibility(View.GONE);
-                signupContainer.setVisibility(View.VISIBLE);
-            }
-        });
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                loginContainer.setVisibility(View.VISIBLE);
-                signupContainer.setVisibility(View.GONE);
+            public void onClick(View v) {
+                String username = emailLogin.getText().toString();
+                String password = passwordLogin.getText().toString();
+
+                if(emailLogin.getText().length() == 0 || passwordLogin.getText().length() == 0){
+                    loginPresenter.showError();
+                }
+                else{
+                    loginPresenter.doLogin(username,password);
+                }
             }
         });
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(LoginActivity.this, MainActivity.class);
-                startActivity(i);
+    }
 
-            }
-        });
+    @Override
+    public void moveToHomepage() {
+        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+        startActivity(intent);
+        LoginActivity.this.finish();
 
-        buttonSignup.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){
+    }
 
-            }
-        });
+    @Override
+    public void showMessage(String message) {
+        Toast.makeText(getApplicationContext(), message , Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showLoading() {
+        progressDialog.setMessage("Loading");
+        progressDialog.show();
+    }
+
+    @Override
+    public void hideLoading() {
+        progressDialog.dismiss();
+    }
+
+    @Override
+    public void showError() {
+        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
     }
 }
+
+

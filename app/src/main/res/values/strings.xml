@@ -58,13 +58,13 @@
     <string name="hint_password">Password</string>
     <string name="hint_confirm_pass">Confirm Password</string>
     <string name="button_sign_up">Sign Up</string>
-    <string name="question_sign_up">Already have an account ?</string>
+    <string name="question_sign_up">Already have an account ? Login</string>
 
     //Login
     <string name="button_login">Login</string>
     <string name="description_login">Use your account to continue</string>
     <string name="label_welcome_back">Welcome Back.</string>
-    <string name="question_login">Havent an account?</string>
+    <string name="question_login">Havent an account? Sign Up</string>
 
     //Started
     <string name="tagline">Make Your Work Easier</string>

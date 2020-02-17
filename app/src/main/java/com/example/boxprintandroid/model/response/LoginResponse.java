@@ -1,4 +1,4 @@
-package com.example.boxprintandroid.model;
+package com.example.boxprintandroid.model.response;
 
 import com.google.gson.annotations.SerializedName;
 
