@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_list_item);
+        setContentView(R.layout.activity_card_product_list);
 
         rvItem = findViewById(R.id.rv_item);
         rvItem.setHasFixedSize(true);
