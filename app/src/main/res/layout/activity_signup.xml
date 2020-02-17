@@ -28,7 +28,7 @@
         android:gravity="center"/>
 
     <EditText
-        android:id="@+id/inputNameSignup"
+        android:id="@+id/inputNameSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
@@ -45,7 +45,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:hint="@string/hint_email"
-        android:inputType="textPassword"
         android:padding="12.5dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"

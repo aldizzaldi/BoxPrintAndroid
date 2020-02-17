@@ -30,7 +30,7 @@ public class SignupActivity extends AppCompatActivity implements IRegisterView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        inputNameSignup = findViewById(R.id.inputNameSignup);
+        inputNameSignup = findViewById(R.id.inputNameSignUp);
         inputEmailSignup = findViewById(R.id.inputEmailSignup);
         inputPasswordSignup = findViewById(R.id.inputPasswordSignup);
         inputConfirmPasswordSignup = findViewById(R.id.inputConfirmPasswordSignup);
@@ -40,6 +40,25 @@ public class SignupActivity extends AppCompatActivity implements IRegisterView {
 
         progressDialog = new ProgressDialog(this);
         registerPresenter = new RegisterPresenter(this);
+
+        buttonSignup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String name = inputNameSignup.getText().toString();
+                String email = inputEmailSignup.getText().toString();
+                String password = inputPasswordSignup.getText().toString();
+                String cPassword = inputConfirmPasswordSignup.getText().toString();
+
+                if(inputNameSignup.getText().length() == 0 || inputEmailSignup.getText().length() == 0 ||
+                        inputPasswordSignup.getText().length() == 0 ||
+                        inputConfirmPasswordSignup.getText().length() == 0){
+                    registerPresenter.showError();
+                }
+                else{
+                    registerPresenter.registrationUser(name, email, password, cPassword);
+                }
+            }
+        });
     }
 
     @Override
