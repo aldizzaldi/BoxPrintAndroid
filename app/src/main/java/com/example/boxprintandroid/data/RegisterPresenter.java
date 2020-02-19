@@ -22,13 +22,16 @@ public class RegisterPresenter {
         this.view = view;
     }
 
-    void registrationUser(String name, String email, String password, String confirmPass){
+    public void registrationUser(String name, String email, String password, String confirmPass){
         view.showLoading();
         apiEndPoint.register(name,email,password,confirmPass).enqueue(new Callback<RegisterResponse>() {
             @Override
             public void onResponse(Call<RegisterResponse> call, Response<RegisterResponse> response) {
 
                 if(response.isSuccessful()){
+                    Log.e("berhasil", "yey berhasil register");
+                    String nama = response.body().getNama();
+                    view.hideLoading();
 
                 }
             }
@@ -38,6 +41,10 @@ public class RegisterPresenter {
                 view.showMessage(t.getMessage());
             }
         });
+    }
+
+    public void showError(){
+        view.showMessage("Kosong cui fieldnya");
     }
 
 }

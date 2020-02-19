@@ -124,7 +124,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:textColor="#141414"
-                                android:text="Tommorro 9:30 am"
+                                android:text="Tommorrow 9:30 am"
                                 android:textSize="14dp"
                                 android:layout_marginLeft="12dp"
                                 />
@@ -143,12 +143,11 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp"></LinearLayout>
 
-
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="4dp"
-                    >
+                    android:padding="4dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -213,7 +212,7 @@
                 android:divider="#fff"
                 android:clipToPadding="false"
                 android:scrollbars="none"
-                tools:listitem="@layout/item_product_list"/>
+                tools:listitem="@layout/item_cart"/>
 
 
             <TextView
