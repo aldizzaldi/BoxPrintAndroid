@@ -4,14 +4,14 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFF"
+    android:background="#FFFFFF"
     android:fitsSystemWindows="true">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background=""
+        android:background="#FFF"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
         <LinearLayout
