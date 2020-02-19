@@ -11,14 +11,15 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:textColor="#000000"
-        android:text="Cart"
+        android:text="Review Pick"
         android:textSize="17dp"
         android:src="@drawable/btn"
         android:layout_alignParentTop="true"
         android:textStyle="bold"
         android:id="@+id/medium_Textview"/>
 
-    <ScrollView android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn"
         android:layout_below="@+id/medium_Textview">
@@ -39,13 +40,15 @@
                 android:layout_centerHorizontal="true"
                 android:padding="12dp"
                 android:textColor="#898989"
-                android:text="Total 5 item selected"
+                android:text="Total 5 items selected"
                 android:textSize="14dp"
                 android:gravity="center"
-                android:src="@drawable/btn" android:id="@+id/regular_Textview"/>
+                android:src="@drawable/btn"
+                android:id="@+id/regular_Textview"/>
 
 
-            <LinearLayout android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/corner_layout"
@@ -53,13 +56,11 @@
                 android:padding="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
-                android:layout_marginBottom="8dp"
-                >
+                android:layout_marginBottom="8dp">
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
 
                     <LinearLayout android:layout_width="0dp"
                         android:layout_weight="1"
@@ -123,7 +124,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:textColor="#141414"
-                                android:text="Tommorro 9:30 am"
+                                android:text="Tommorrow 9:30 am"
                                 android:textSize="14dp"
                                 android:layout_marginLeft="12dp"
                                 />
@@ -133,52 +134,8 @@
 
                     </LinearLayout>
 
-                    <LinearLayout android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:textColor="#292f33"
-                            android:text="Payable"
-                            android:textSize="12dp"
-                            android:layout_gravity="right"
-
-                            android:gravity="center"
-                            android:layout_margin="3dp"                />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="right"
-                            android:layout_margin="3dp"
-                            android:gravity="right"
-                            android:text="Rp. 40.000"
-                            android:textColor="#d7effe"
-                            android:textSize="14dp" />
-                        />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentBottom="true"
-                            android:layout_centerHorizontal="true"
-                            android:textColor="#3f7600"
-                            android:text="Free pick up-drop"
-                            android:textSize="12dp"
-                            android:layout_gravity="right"
-                            android:gravity="right"
-                            android:layout_margin="3dp"                />
-                        />
-
-                    </LinearLayout>
-
                 </LinearLayout>
+
 
                 <LinearLayout android:layout_width="match_parent"
                     android:layout_height="0.5dp"
@@ -186,11 +143,11 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp"></LinearLayout>
 
-                <LinearLayout android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:padding="4dp"
-                    >
+                    android:padding="4dp">
 
                     <TextView
                         android:layout_width="0dp"
@@ -223,28 +180,52 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="6dp"
-                    android:gravity="center"
-                    android:text="21,Perumdos ITS"
                     android:textColor="#000000"
-                    android:textSize="13dp" />
+                    android:text="50 Gangnam Seoul."
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="4dp"
+                    />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="2dp"
-                    android:gravity="center"
-                    android:text="Kejawan Putih, 60111"
                     android:textColor="#000000"
-                    android:textSize="13dp" />
+                    android:text="South Korea, IL 60185"
+                    android:textSize="13dp"
+                    android:gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="4dp"
+                    />
 
             </LinearLayout>
 
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:dividerHeight="0dp"
+                android:divider="#fff"
+                android:clipToPadding="false"
+                android:scrollbars="none"
+                tools:listitem="@layout/item_cart"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:padding="18dp"
+                android:textColor="#898989"
+                android:text="invoice detail shall be available here within 24 hours of pick"
+                android:textSize="13dp"
+                android:gravity="center"
+                android:src="@drawable/btn"/>
         </LinearLayout>
 
     </ScrollView>
