@@ -486,7 +486,7 @@
 
                 </LinearLayout>
 
-                <include layout="@layout/item_homepage"/>
+                <include layout="@layout/item_homepage" />
 
                 <!--                <androidx.recyclerview.widget.RecyclerView-->
                 <!--                    android:layout_width="match_parent"-->
