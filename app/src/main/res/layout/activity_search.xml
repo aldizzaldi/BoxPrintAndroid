@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
@@ -7,7 +8,7 @@
     android:background="#FFFFFF"
     android:fitsSystemWindows="true">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <Toolbar
         android:id="@+id/appbar_search"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,9 +22,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/search_bar"
-                android:layout_width="match_parent"
+                android:layout_width="360dp"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_margin="@dimen/spacing_middle"
+                android:layout_margin="10dp"
                 android:clipToPadding="false"
                 app:cardBackgroundColor="#EEEEEE"
                 app:cardCornerRadius="2dp"
@@ -83,7 +84,7 @@
             app:tabTextAppearance="@style/TextAppearance.AppCompat.Subhead"
             app:tabTextColor="#cccccc"/>
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"

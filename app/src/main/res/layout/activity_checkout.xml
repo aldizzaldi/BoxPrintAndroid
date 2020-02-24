@@ -78,7 +78,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:textColor="#898989"
-                                android:text="Pick up"
+                                android:text="Order  "
                                 android:textSize="12dp"
                                 android:gravity="center"
                                 android:src="@drawable/btn"/>
@@ -112,7 +112,7 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_centerHorizontal="true"
                                 android:textColor="#898989"
-                                android:text="Delivery"
+                                android:text="Pick Up"
                                 android:textSize="12dp"
                                 android:gravity="center"
                                 android:src="@drawable/btn"/>
