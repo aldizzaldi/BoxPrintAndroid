@@ -40,7 +40,10 @@
     <string name="label_username">Username</string>
     <string name="label_email">Email</string>
     <string name="label_password">Password</string>
-    <string name="label_set_location">Set Location</string>
+    <string name="phone">Phone Number</string>
+    <string name="label_set_location">Set Location Address</string>
+    <string name="account_number">Account Number</string>
+    <string name="your_location">Your Location</string>
     <string name="label_open">Open</string>
     <string name="label_button_save">SAVE</string>
 
