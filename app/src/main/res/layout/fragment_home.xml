@@ -375,8 +375,8 @@
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:scaleType="centerCrop"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_ads"/>
+                                android:layout_gravity="center"/>
+<!--                                android:src="@drawable/ic_ads"/>-->
 
 
                             <TextView
@@ -399,8 +399,8 @@
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-                                android:layout_gravity="center"
-                                android:src="@drawable/ic_analytics"/>
+                                android:layout_gravity="center"/>
+<!--                                android:src="@drawable/ic_analytics"/>-->
 
 
                             <TextView
