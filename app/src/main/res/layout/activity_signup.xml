@@ -36,7 +36,6 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/edit_text_shape"
         android:hint="@string/hint_name"
-        android:inputType="textPersonName"
         android:padding="12.5dp" />
 
     <EditText
@@ -48,7 +47,6 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/edit_text_shape"
         android:hint="@string/hint_email"
-        android:inputType="textPassword"
         android:padding="12.5dp" />
 
     <EditText

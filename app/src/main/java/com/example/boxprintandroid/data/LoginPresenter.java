@@ -34,7 +34,7 @@ public class LoginPresenter {
                     SharedPrefUtils.setStringSharedPref("email", txtEmail);
                     Log.e("Good", "Successed for login");
                     view.hideLoading();
-                    //view.moveToHomepage();
+                    view.moveToHomepage();
                     Log.e("Good", "mamamia");
                 }
                 else{
@@ -46,6 +46,7 @@ public class LoginPresenter {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 view.showMessage(t.getMessage());
+                view.hideLoading();
                 Log.e("error", txtEmail + "_" + txtPassword);
             }
         });

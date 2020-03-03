@@ -32,7 +32,8 @@ public class RegisterPresenter {
                     Log.e("berhasil", "yey berhasil register");
                     String nama = response.body().getNama();
                     view.hideLoading();
-
+                    view.showMessage("Akun berhasil dibuat");
+                    view.showLogin();
                 }
             }
 

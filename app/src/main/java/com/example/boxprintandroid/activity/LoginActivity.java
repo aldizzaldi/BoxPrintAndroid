@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     @Override
     public void moveToHomepage() {
-        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         LoginActivity.this.finish();
 
