@@ -1,4 +1,4 @@
-package com.example.boxprintandroid;
+package com.example.boxprintandroid.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;
