@@ -12,9 +12,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.boxprintandroid.R;
-import com.example.boxprintandroid.data.LoginPresenter;
 import com.example.boxprintandroid.data.RegisterPresenter;
-import com.example.boxprintandroid.ui.IRegisterView;
+import com.example.boxprintandroid.interfaces.IRegisterView;
 
 public class SignupActivity extends AppCompatActivity implements IRegisterView {
 

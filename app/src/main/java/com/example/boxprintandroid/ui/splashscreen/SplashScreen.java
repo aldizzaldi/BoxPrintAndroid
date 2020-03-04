@@ -8,11 +8,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.boxprintandroid.R;
-import com.example.boxprintandroid.SharedPrefUtils;
-import com.example.boxprintandroid.activity.LoginActivity;
-import com.example.boxprintandroid.activity.MainActivity;
+import com.example.boxprintandroid.utils.SharedPrefUtils;
 import com.example.boxprintandroid.activity.StartedActivity;
-import com.example.boxprintandroid.ui.home.HomeFragment;
 
 public class SplashScreen extends AppCompatActivity  {
 
