@@ -24,9 +24,6 @@ public class User {
     @SerializedName("foto_sampul")
     String fotoSampul;
 
-    @SerializedName("jam_buka")
-
-
     public int getId() {
         return id;
     }
