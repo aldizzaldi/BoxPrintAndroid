@@ -21,8 +21,6 @@ public class ProfilePresenter {
     }
 
     public void showProfile(){
-        Log.e("loh he", "state atas");
-
         apiEndPoint.showProfile(token, 1).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
@@ -47,13 +45,13 @@ public class ProfilePresenter {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (response.isSuccessful()){
-
+                    view.showMessage("Profil berhasil di update");
                 }
             }
 
             @Override
             public void onFailure(Call<UserResponse> call, Throwable t) {
-
+                view.showMessage(t.getMessage());
             }
         });
     }
