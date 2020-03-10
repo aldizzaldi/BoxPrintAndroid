@@ -51,4 +51,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imgHistoryDetail"
         app:srcCompat="@drawable/brochure" />
 
+    <TextView
+        android:id="@+id/txtHistoryTitile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/titleProduct"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_detailHistory"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
