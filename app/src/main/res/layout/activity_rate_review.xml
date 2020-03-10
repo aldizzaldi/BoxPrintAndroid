@@ -12,7 +12,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/spacing_large">
 
-        <com.mikhaellopez.circularimageview.CircularImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/spacing_xmlarge"
             android:layout_height="@dimen/spacing_xmlarge"
             android:src="@drawable/photo_male_7"
@@ -55,7 +55,7 @@
         android:layout_height="1px"
         android:layout_marginLeft="@dimen/spacing_large"
         android:layout_marginRight="@dimen/spacing_large"
-        android:background="@color/grey_10" />
+        android:background="#e6e6e6" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -65,7 +65,7 @@
         android:paddingLeft="@dimen/spacing_large"
         android:paddingRight="@dimen/spacing_large">
 
-        <androidx.appcompat.widget.AppCompatRatingBar
+        <RatingBar
             style="@style/Yellow.AppCompatRatingBar"
             android:id="@+id/rating_bar"
             android:layout_width="wrap_content"
@@ -106,14 +106,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="1" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/bt_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="CANCEL" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/bt_submit"
             style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
