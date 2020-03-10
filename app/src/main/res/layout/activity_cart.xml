@@ -213,7 +213,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/spacing_xxlarge"
+            android:layout_height="wrap_content"
             android:background="@android:color/white"
             android:gravity="center_vertical"
             android:orientation="horizontal"
@@ -222,9 +222,10 @@
 
             <Button
                 android:id="@+id/buttonCheckout"
-                android:layout_width="390dp"
-                android:layout_height="45dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
                 android:background="@drawable/button_shape_orange"
                 android:gravity="center"
                 android:text="Checkout"

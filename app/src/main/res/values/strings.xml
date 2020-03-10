@@ -44,6 +44,7 @@
     <string name="account_number">Account Number</string>
     <string name="your_location">Your Location</string>
     <string name="label_open">Open</string>
+    <string name="descAccount">Description</string>
     <string name="label_button_save">SAVE</string>
 
     //Chat
