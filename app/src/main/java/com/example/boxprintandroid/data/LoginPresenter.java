@@ -1,13 +1,12 @@
 package com.example.boxprintandroid.data;
 
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.boxprintandroid.SharedPrefUtils;
+import com.example.boxprintandroid.utils.SharedPrefUtils;
 import com.example.boxprintandroid.api.ApiRetrofit;
 import com.example.boxprintandroid.api.IApiEndPoint;
 import com.example.boxprintandroid.model.response.LoginResponse;
-import com.example.boxprintandroid.ui.ILoginView;
+import com.example.boxprintandroid.interfaces.ILoginView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +33,7 @@ public class LoginPresenter {
                     SharedPrefUtils.setStringSharedPref("email", txtEmail);
                     Log.e("Good", "Successed for login");
                     view.hideLoading();
-                    //view.moveToHomepage();
+                    view.moveToHomepage();
                     Log.e("Good", "mamamia");
                 }
                 else{
@@ -46,6 +45,7 @@ public class LoginPresenter {
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
                 view.showMessage(t.getMessage());
+                view.hideLoading();
                 Log.e("error", txtEmail + "_" + txtPassword);
             }
         });

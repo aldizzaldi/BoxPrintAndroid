@@ -1,14 +1,11 @@
 package com.example.boxprintandroid.data;
 
 import android.util.Log;
-import android.widget.Toast;
 
-import com.example.boxprintandroid.activity.MainActivity;
 import com.example.boxprintandroid.api.ApiRetrofit;
 import com.example.boxprintandroid.api.IApiEndPoint;
 import com.example.boxprintandroid.model.response.RegisterResponse;
-import com.example.boxprintandroid.ui.ILoginView;
-import com.example.boxprintandroid.ui.IRegisterView;
+import com.example.boxprintandroid.interfaces.IRegisterView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,7 +29,8 @@ public class RegisterPresenter {
                     Log.e("berhasil", "yey berhasil register");
                     String nama = response.body().getNama();
                     view.hideLoading();
-
+                    view.showMessage("Akun berhasil dibuat");
+                    view.showLogin();
                 }
             }
 

@@ -3,7 +3,6 @@ package com.example.boxprintandroid.activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,7 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.boxprintandroid.R;
 import com.example.boxprintandroid.data.LoginPresenter;
-import com.example.boxprintandroid.ui.ILoginView;
+import com.example.boxprintandroid.interfaces.ILoginView;
 
 
 public class LoginActivity extends AppCompatActivity implements ILoginView {
@@ -57,7 +56,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     @Override
     public void moveToHomepage() {
-        Intent intent = new Intent(LoginActivity.this, SignupActivity.class);
+        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
         startActivity(intent);
         LoginActivity.this.finish();
 
@@ -65,7 +64,7 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
 
     @Override
     public void showMessage(String message) {
-        Toast.makeText(getApplicationContext(), message , Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message , Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -77,11 +76,6 @@ public class LoginActivity extends AppCompatActivity implements ILoginView {
     @Override
     public void hideLoading() {
         progressDialog.dismiss();
-    }
-
-    @Override
-    public void showError() {
-        Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
     }
 }
 
