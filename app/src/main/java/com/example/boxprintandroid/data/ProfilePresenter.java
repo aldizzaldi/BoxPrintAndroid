@@ -7,6 +7,7 @@ import com.example.boxprintandroid.api.IApiEndPoint;
 import com.example.boxprintandroid.interfaces.IProfileView;
 import com.example.boxprintandroid.model.response.UserResponse;
 import com.example.boxprintandroid.pojo.User;
+import com.example.boxprintandroid.utils.SharedPrefUtils;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -21,7 +22,8 @@ public class ProfilePresenter {
     }
 
     public void showProfile(){
-        apiEndPoint.showProfile(token, 1).enqueue(new Callback<UserResponse>() {
+        int id = SharedPrefUtils.getIntSharedPref("id_user", 0);
+        apiEndPoint.showProfile(token, id).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 if (response.isSuccessful()){
@@ -34,6 +36,10 @@ public class ProfilePresenter {
                 view.showMessage(t.getMessage());
             }
         });
+    }
+
+    public void goEditProfile(){
+        view.moveToEditProfile();
     }
 
     public void editProfile(User user){
@@ -54,5 +60,11 @@ public class ProfilePresenter {
                 view.showMessage(t.getMessage());
             }
         });
+    }
+
+    public void  logout(){
+        SharedPrefUtils.removeSavedPref("token");
+        SharedPrefUtils.removeSavedPref("id_user");
+        view.moveToSplashscreen();
     }
 }

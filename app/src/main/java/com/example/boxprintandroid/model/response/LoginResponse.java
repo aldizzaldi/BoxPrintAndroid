@@ -6,6 +6,9 @@ public class LoginResponse {
     @SerializedName("id_user")
     int userId;
 
+    @SerializedName("token")
+    String token;
+
     public int getUserId() {
         return userId;
     }
@@ -13,9 +16,6 @@ public class LoginResponse {
     public void setUserId(int userId) {
         this.userId = userId;
     }
-
-    @SerializedName("token")
-    String token;
 
     public String getToken() {
         return token;

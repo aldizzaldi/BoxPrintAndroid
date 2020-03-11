@@ -30,6 +30,7 @@
         <activity android:name=".activity.LoginActivity"/>
         <activity android:name=".activity.StartedActivity"/>
         <activity android:name=".activity.SignupActivity"/>
+        <activity android:name=".activity.EditProfileActivity"/>
     </application>
 
 </manifest>
