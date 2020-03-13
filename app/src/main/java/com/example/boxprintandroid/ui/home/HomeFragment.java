@@ -1,35 +1,54 @@
 package com.example.boxprintandroid.ui.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
-import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boxprintandroid.R;
+import com.example.boxprintandroid.adapter.HomeItemsAdapter;
+import com.example.boxprintandroid.data.HomePresenter;
+import com.example.boxprintandroid.interfaces.IHomeView;
+import com.example.boxprintandroid.pojo.Item;
 
-public class HomeFragment extends Fragment {
+import java.util.ArrayList;
 
-    private HomeViewModel homeViewModel;
+public class HomeFragment extends Fragment implements IHomeView {
+    private HomePresenter presenter;
+    private View root;
+    private RecyclerView recyclerView;
+    private HomeItemsAdapter homeItemsAdapter;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
-//        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-            }
-        });
+
+        root = inflater.inflate(R.layout.fragment_home, container, false);
+        presenter = new HomePresenter(this);
+        presenter.getAllItemsInHome();
+
         return root;
+    }
+
+    @Override
+    public void showMessage(String message) {
+
+    }
+
+    @Override
+    public void getAllItems(ArrayList<Item> items) {
+        recyclerView = root.findViewById(R.id.rv_item);
+        homeItemsAdapter = new HomeItemsAdapter(items, getContext());
+        int i = items.size();
+        Log.e("jumlah adapter", Integer.toString(i));
+
+        recyclerView.setAdapter(homeItemsAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        Log.e("nyampe", "duar");
     }
 }
