@@ -1,18 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E6E6E6">
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@drawable/ic_add_white_24dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_orders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="@string/title_account"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#E6E6E6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/profileActivity"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,16 +49,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/lighthouse" />
-
-            <ImageButton
-                android:id="@+id/imageButton"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginTop="85dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/desert" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/photoProfile"
@@ -93,47 +106,17 @@
                 app:layout_constraintTop_toBottomOf="@+id/text_rate" />
 
             <TextView
-                android:id="@+id/text_open"
-                android:layout_width="wrap_content"
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginBottom="8dp"
-                android:drawableLeft="@drawable/ic_schedule_black_24dp"
-                android:text="@string/open"
-                android:textColor="@color/blue"
+                android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/text_openstart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/start"
-                app:layout_constraintStart_toEndOf="@+id/text_open"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/text_until"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/until"
-                app:layout_constraintStart_toEndOf="@+id/text_openstart"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/text_close"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/end"
-                app:layout_constraintStart_toEndOf="@+id/text_until"
                 app:layout_constraintTop_toBottomOf="@+id/line" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -142,13 +125,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profileActivity">
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/btn_editProfile"
@@ -157,14 +140,12 @@
                 android:layout_marginTop="16dp"
                 android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_edit_black_24dp"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right"
                 android:drawablePadding="12dp"
                 android:padding="16dp"
                 android:text="@string/title_edit_profile"
                 android:textAlignment="viewStart"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_produkSaya"
@@ -172,32 +153,25 @@
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_store_black_24dp"
+                android:drawableRight="@drawable/ic_keyboard_arrow_right"
                 android:drawablePadding="12dp"
                 android:padding="16dp"
                 android:text="@string/title_my_product"
                 android:textAlignment="viewStart"
-                android:textAllCaps="false"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_editProfile" />
+                android:textAllCaps="false" />
 
             <Button
                 android:id="@+id/btn_produkSaya2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="300dp"
                 android:background="@android:color/white"
                 android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
                 android:drawablePadding="12dp"
                 android:padding="16dp"
                 android:text="@string/title_logout"
                 android:textAlignment="viewStart"
-                android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btn_produkSaya" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:textAllCaps="false" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
