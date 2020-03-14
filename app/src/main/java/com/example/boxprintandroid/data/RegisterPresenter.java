@@ -36,6 +36,7 @@ public class RegisterPresenter {
 
             @Override
             public void onFailure(Call<RegisterResponse> call, Throwable t) {
+                view.hideLoading();
                 view.showMessage(t.getMessage());
             }
         });

@@ -1,6 +1,7 @@
 package com.example.boxprintandroid.api;
 
 import com.example.boxprintandroid.model.response.ItemResponse;
+import com.example.boxprintandroid.model.response.ItemsResponse;
 import com.example.boxprintandroid.model.response.LoginResponse;
 import com.example.boxprintandroid.model.response.RegisterResponse;
 import com.example.boxprintandroid.model.response.UserResponse;
@@ -47,10 +48,16 @@ public interface IApiEndPoint {
             @Path("id") int id
     );
 
-    @FormUrlEncoded
     @GET("item")
-    Call<ItemResponse> getAllItem(
+    Call<ItemsResponse> getAllItem(
             @Header("Authorization") String header
+    );
+
+    @FormUrlEncoded
+    @GET("item/{id}")
+    Call<ItemsResponse> getAllItemOneUser(
+            @Header("Authorization") String header,
+            @Path("id") int id
     );
 
     @FormUrlEncoded

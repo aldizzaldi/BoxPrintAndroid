@@ -15,6 +15,9 @@ public class Item {
     @SerializedName("nama_item")
     String namaItem;
 
+    @SerializedName("harga_item")
+    Double hargaItem;
+
     @SerializedName("deskripsi_item")
     String deskripsiItem;
 
@@ -48,6 +51,14 @@ public class Item {
 
     public void setNamaItem(String namaItem) {
         this.namaItem = namaItem;
+    }
+
+    public Double getHargaItem() {
+        return hargaItem;
+    }
+
+    public void setHargaItem(Double hargaItem) {
+        this.hargaItem = hargaItem;
     }
 
     public String getDeskripsiItem() {
