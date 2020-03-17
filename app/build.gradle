@@ -73,4 +73,7 @@ dependencies {
 
     //paypal
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+
+    //shimmer
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
 }
