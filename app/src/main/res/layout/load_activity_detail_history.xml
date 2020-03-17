@@ -1,172 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <View
-            android:id="@+id/viewImgHistory"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:background="@drawable/load_img_round" />
-
-        <View
-            android:id="@+id/view_titleDetailHistory"
-            android:layout_width="150dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/load_round" />
-
-        <View
-            android:id="@+id/view_finishedDetailHistory"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/load_round" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <View
-            android:id="@+id/viewImageDetailHis"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@drawable/load_round"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"/>
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        shimmer:duration="500">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textColor="#000000"
+                android:text="Review Pick"
+                android:textSize="17dp"
+                android:src="@drawable/btn"
+                android:layout_alignParentTop="true"
+                android:textStyle="bold"
+                android:id="@+id/medium_Textview"/>
+
+            <include
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <View
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/load_round" />
-
-                <View
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/load_round" />
-            </LinearLayout>
-
-            <View
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/load_round" />
+                android:layout_gravity="center"
+                layout="@layout/item_load_titlefull" />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_total"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_total"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_chat"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_add_product"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_itemproduct"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                layout="@layout/item_load_itemproduct"/>
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                layout="@layout/item_load_buttonfull"/>
+
+
         </LinearLayout>
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="370dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#E6E6E6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="24dp"
-            android:text="Total Pembayaran"
-            android:textColor="#000000"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <View
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/load_round" />
-
-    </LinearLayout>
-
-    <View
-        android:layout_width="370dp"
-        android:layout_height="2dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:background="#E6E6E6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="24dp"
-        android:text="Metode Pembayaran"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <View
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/load_round"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"/>
-
-        <View
-            android:layout_width="150dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/load_round" />
-
-        <View
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="25dp"
-            android:background="@drawable/load_round" />
-
-    </LinearLayout>
-
+    </com.facebook.shimmer.ShimmerFrameLayout>
 </LinearLayout>
