@@ -39,7 +39,6 @@ public class HomeItemsAdapter extends RecyclerView.Adapter<HomeItemsAdapter.Home
         Log.e("ada isi", items.get(position).getNamaItem());
         holder.namaItem.setText(items.get(position).getNamaItem());
         holder.hargaItem.setText(Integer.toString(items.get(position).getHargaItem().intValue()));
-
     }
 
     @Override

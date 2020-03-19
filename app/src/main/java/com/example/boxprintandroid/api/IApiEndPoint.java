@@ -5,6 +5,7 @@ import com.example.boxprintandroid.model.response.ItemsResponse;
 import com.example.boxprintandroid.model.response.LoginResponse;
 import com.example.boxprintandroid.model.response.RegisterResponse;
 import com.example.boxprintandroid.model.response.UserResponse;
+import com.example.boxprintandroid.model.response.UsersResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -46,6 +47,11 @@ public interface IApiEndPoint {
     Call<UserResponse> showProfile(
             @Header("Authorization") String header,
             @Path("id") int id
+    );
+
+    @GET("user")
+    Call<UsersResponse> getAllUser(
+            @Header("Authorization") String header
     );
 
     @GET("item")
