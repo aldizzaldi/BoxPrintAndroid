@@ -43,10 +43,12 @@ public class HomePresenter {
                     }
                     view.getAllItems(items);
                 }
+
             }
 
             @Override
             public void onFailure(Call<ItemsResponse> call, Throwable t) {
+
 
             }
         });
@@ -58,8 +60,9 @@ public class HomePresenter {
             public void onResponse(Call<UsersResponse> call, Response<UsersResponse> response) {
                 if (response.isSuccessful()){
                     int size = response.body().getUsers().size();
-                    for (int i = 0; i > size; i++){
+                    for (int i = 0; i < size; i++){
                         users.add(response.body().getUsers().get(i));
+                        Log.e("user", users.get(i).getNama());
                     }
                     view.getAllUsers(users);
                 }

@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.boxprintandroid.R;
 import com.example.boxprintandroid.adapter.HomeItemsAdapter;
+import com.example.boxprintandroid.adapter.HomeUsersAdapter;
 import com.example.boxprintandroid.data.HomePresenter;
 import com.example.boxprintandroid.interfaces.IHomeView;
 import com.example.boxprintandroid.pojo.Item;
@@ -29,6 +30,7 @@ public class HomeFragment extends Fragment implements IHomeView {
         root = inflater.inflate(R.layout.fragment_home, container, false);
         HomePresenter presenter = new HomePresenter(this);
         presenter.getAllItemsInHome();
+        presenter.getAllUserInHome();
 
         return root;
     }
@@ -43,15 +45,21 @@ public class HomeFragment extends Fragment implements IHomeView {
         RecyclerView recyclerView1 = root.findViewById(R.id.rv_item);
         HomeItemsAdapter homeItemsAdapter = new HomeItemsAdapter(items, getContext());
         int i = items.size();
-        Log.e("jumlah adapter", Integer.toString(i));
+//        Log.e("jumlah adapter", Integer.toString(i));
 
         recyclerView1.setAdapter(homeItemsAdapter);
         recyclerView1.setLayoutManager(new LinearLayoutManager(getContext()));
-        Log.e("nyampe", "duar");
+//        Log.e("nyampe", "duar");
     }
 
     @Override
     public void getAllUsers(ArrayList<User> users) {
-        
+        RecyclerView recyclerView2 = root.findViewById(R.id.rv_percetakan);
+        int i = users.size();
+        HomeUsersAdapter homeUsersAdapter = new HomeUsersAdapter(users, getContext());
+        recyclerView2.setAdapter(homeUsersAdapter);
+        recyclerView2.setLayoutManager(new LinearLayoutManager(getContext()));
+
+
     }
 }
