@@ -21,13 +21,13 @@
             android:scaleType="centerCrop" />
 
 
-            <TextView
-                android:id="@+id/tv_item_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:textStyle="bold"
-                tools:text="@string/item_name"/>
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="bold"
+            tools:text="@string/item_name"/>
 
         <TextView
             android:id="@+id/tv_item_detail"

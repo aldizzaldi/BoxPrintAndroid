@@ -98,57 +98,18 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/image_star" />
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/text_description"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                android:text="Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/line"
-                app:srcCompat="@drawable/ic_schedule_black_24dp" />
-
-            <TextView
-                android:id="@+id/text_open"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="3dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/open"
-                android:textColor="@color/blue"
-                app:layout_constraintStart_toEndOf="@+id/imageView3"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/text_openstart"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/start"
-                app:layout_constraintStart_toEndOf="@+id/text_open"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/text_until"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/until"
-                app:layout_constraintStart_toEndOf="@+id/text_openstart"
-                app:layout_constraintTop_toBottomOf="@+id/line" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="8dp"
-                android:text="@string/end"
-                app:layout_constraintStart_toEndOf="@+id/text_until"
                 app:layout_constraintTop_toBottomOf="@+id/line" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

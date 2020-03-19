@@ -51,7 +51,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="16dp"
                         android:layout_marginBottom="24dp"
-                        android:text="@string/status_order" />
+                        android:text="@string/status_order"
+                        android:textColor="@android:color/holo_red_dark" />
 
                 </LinearLayout>
 

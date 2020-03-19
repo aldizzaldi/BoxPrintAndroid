@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
@@ -46,7 +46,7 @@
                 android:text="Cocobolo Poolside \n
 Bar + Grill"
                 android:layout_marginLeft="12.5dp"
-                android:id="@+id/nearbytext1"
+                android:id="@+id/item_title_product"
                 android:textColor="#262628"/>
 
             <TextView
@@ -67,22 +67,13 @@ Bar + Grill"
                 android:layout_marginLeft="12.5dp"
                 android:layout_marginBottom="11.dp">
 
-                <RatingBar
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:stepSize="0.1"
-                    android:progressTint="@android:color/holo_red_dark"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:focusable="true"
-                    android:rating="4"/>
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="238 reviews"
                     android:textSize="11.5sp"
                     android:layout_marginLeft="2.6dp"
-                    android:id="@+id/nearbytext3"
+                    android:id="@+id/item_price_product"
                     android:textColor="#9b9b9b"/>
 
             </LinearLayout>

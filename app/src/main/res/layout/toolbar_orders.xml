@@ -47,6 +47,17 @@
         </LinearLayout>
 
 
+        <ImageButton
+            android:id="@+id/imagebutton_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_history" />
+
         <View
             android:id="@+id/line6"
             android:layout_width="match_parent"
