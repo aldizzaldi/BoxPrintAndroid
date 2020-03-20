@@ -7,7 +7,9 @@ import com.example.boxprintandroid.api.IApiEndPoint;
 import com.example.boxprintandroid.interfaces.IHomeView;
 import com.example.boxprintandroid.model.response.ItemResponse;
 import com.example.boxprintandroid.model.response.ItemsResponse;
+import com.example.boxprintandroid.model.response.UsersResponse;
 import com.example.boxprintandroid.pojo.Item;
+import com.example.boxprintandroid.pojo.User;
 import com.example.boxprintandroid.utils.SharedPrefUtils;
 
 import java.util.ArrayList;
@@ -20,14 +22,14 @@ public class HomePresenter {
     private IHomeView view;
     private final IApiEndPoint apiEndPoint = ApiRetrofit.getInstance().create(IApiEndPoint.class);
     ArrayList<Item> items = new ArrayList<>();
-    String token;
+    ArrayList<User> users = new ArrayList<>();
+    String token = SharedPrefUtils.getStringSharedPref("token", "null");;
 
     public HomePresenter(IHomeView view) {
         this.view = view;
     }
 
     public void getAllItemsInHome(){
-        token = SharedPrefUtils.getStringSharedPref("token", "null");
         apiEndPoint.getAllItem(token).enqueue(new Callback<ItemsResponse>() {
             @Override
             public void onResponse(Call<ItemsResponse> call, Response<ItemsResponse> response) {
@@ -41,13 +43,35 @@ public class HomePresenter {
                     }
                     view.getAllItems(items);
                 }
+
             }
 
             @Override
             public void onFailure(Call<ItemsResponse> call, Throwable t) {
 
+
             }
         });
+    }
 
+    public void getAllUserInHome(){
+        apiEndPoint.getAllUser(token).enqueue(new Callback<UsersResponse>() {
+            @Override
+            public void onResponse(Call<UsersResponse> call, Response<UsersResponse> response) {
+                if (response.isSuccessful()){
+                    int size = response.body().getUsers().size();
+                    for (int i = 0; i < size; i++){
+                        users.add(response.body().getUsers().get(i));
+                        Log.e("user", users.get(i).getNama());
+                    }
+                    view.getAllUsers(users);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<UsersResponse> call, Throwable t) {
+
+            }
+        });
     }
 }

@@ -36,10 +36,9 @@ public class HomeItemsAdapter extends RecyclerView.Adapter<HomeItemsAdapter.Home
     @Override
     public void onBindViewHolder(@NonNull HomeItemsViewHolder holder, int position) {
         idItem = items.get(position).getId();
-        Log.e("ada isi", items.get(position).getNamaItem());
+//        Log.e("ada isi", items.get(position).getNamaItem());
         holder.namaItem.setText(items.get(position).getNamaItem());
         holder.hargaItem.setText(Integer.toString(items.get(position).getHargaItem().intValue()));
-
     }
 
     @Override
