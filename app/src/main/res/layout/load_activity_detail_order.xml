@@ -21,8 +21,8 @@
 
             <include layout="@layout/item_load_detail_order"/>
             <include layout="@layout/item_load_itemproduct"/>
-            <include layout="@layout/item_load_itemproduct"/>
-            <include layout="@layout/item_load_itemproduct"/>
+<!--            <include layout="@layout/item_load_itemproduct"/>-->
+<!--            <include layout="@layout/item_load_itemproduct"/>-->
 
             <View
                 android:layout_width="370dp"
@@ -35,7 +35,7 @@
             <include
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="8dp"
                 layout="@layout/item_load_chat"/>
 
@@ -50,11 +50,21 @@
             <include
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:layout_marginStart="14dp"
                 layout="@layout/item_load_titlefull"/>
 
-            <include layout="@layout/item_load_detail_order"/>
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/item_load_detail_order" />
+
+            <include
+                layout="@layout/item_load_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="105dp" />
 
         </LinearLayout>
     </com.facebook.shimmer.ShimmerFrameLayout>
