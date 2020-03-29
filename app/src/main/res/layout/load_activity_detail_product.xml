@@ -5,4 +5,46 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        layout="@layout/item_load_detail_product"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        layout="@layout/item_load_add_product"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        layout="@layout/item_load_total"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        layout="@layout/item_load_twobutton"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="20dp"
+        layout="@layout/item_load_plusminus"/>
+
+    <include
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        layout="@layout/item_load_threebutton"/>
+
 </LinearLayout>
