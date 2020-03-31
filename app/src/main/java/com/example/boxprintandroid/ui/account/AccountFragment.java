@@ -20,6 +20,8 @@ import com.example.boxprintandroid.interfaces.IProfileView;
 import com.example.boxprintandroid.pojo.User;
 import com.example.boxprintandroid.ui.splashscreen.SplashScreen;
 
+import java.io.Serializable;
+
 public class AccountFragment extends Fragment implements IProfileView {
     TextView name, address;
     Button logout, editProfile;
@@ -70,8 +72,11 @@ public class AccountFragment extends Fragment implements IProfileView {
     }
 
     @Override
-    public void moveToEditProfile() {
+    public void moveToEditProfile(User user) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("user", (Serializable) user);
         Intent intent = new Intent(getActivity(), EditProfileActivity.class);
+        intent.putExtras(bundle);
         this.startActivity(intent);
     }
 

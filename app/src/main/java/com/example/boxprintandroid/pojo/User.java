@@ -2,7 +2,9 @@ package com.example.boxprintandroid.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     @SerializedName("id")
     int id;
 
