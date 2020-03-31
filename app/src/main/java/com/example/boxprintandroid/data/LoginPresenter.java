@@ -21,36 +21,37 @@ public class LoginPresenter {
     }
 
     public void doLogin(String txtEmail, String txtPassword){
-        view.showLoading();
-        apiEndPoint.login(txtEmail, txtPassword).enqueue(new Callback<LoginResponse>() {
-            @Override
-            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
-                String token;
-                int idUser;
-
-                if(response.isSuccessful()){
-                    token = "Bearer " + response.body().getToken();
-                    idUser = response.body().getUserId();
-                    SharedPrefUtils.setStringSharedPref("token", token);
-//                    SharedPrefUtils.setStringSharedPref("email", txtEmail);
-                    SharedPrefUtils.setIntSharedPref("id_user", idUser);
-                    Log.e("Good", "Successed for login");
-                    view.hideLoading();
-                    view.moveToHomepage();
-                    Log.e("Good", "mamamia");
-                }
-                else{
-                    view.hideLoading();
-                    view.showMessage("Username or password don't match");
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LoginResponse> call, Throwable t) {
-                view.showMessage(t.getMessage());
-                view.hideLoading();
-            }
-        });
+//        view.showLoading();
+//        apiEndPoint.login(txtEmail, txtPassword).enqueue(new Callback<LoginResponse>() {
+//            @Override
+//            public void onResponse(Call<LoginResponse> call, Response<LoginResponse> response) {
+//                String token;
+//                int idUser;
+//
+//                if(response.isSuccessful()){
+//                    token = "Bearer " + response.body().getToken();
+//                    idUser = response.body().getUserId();
+//                    SharedPrefUtils.setStringSharedPref("token", token);
+////                    SharedPrefUtils.setStringSharedPref("email", txtEmail);
+//                    SharedPrefUtils.setIntSharedPref("id_user", idUser);
+//                    Log.e("Good", "Successed for login");
+//                    view.hideLoading();
+//                    view.moveToHomepage();
+//                    Log.e("Good", "mamamia");
+//                }
+//                else{
+//                    view.hideLoading();
+//                    view.showMessage("Username or password don't match");
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<LoginResponse> call, Throwable t) {
+//                view.showMessage(t.getMessage());
+//                view.hideLoading();
+//            }
+//        });
+        view.moveToHomepage();
     }
 
     public void showError(){

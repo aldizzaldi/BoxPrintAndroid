@@ -20,20 +20,22 @@ public class EditProfileActivity extends AppCompatActivity implements IProfileVi
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_profile);
+
         editNama = (EditText) findViewById(R.id.editName);
         editEmail = (EditText) findViewById(R.id.editEmail);
         editPhone = (EditText) findViewById(R.id.editPhoneNumber);
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_profile);
+
         Intent intent = this.getIntent();
         Bundle bundle = intent.getExtras();
         User user = (User) bundle.getSerializable("user");
-//        editNama.setText(user.getNama());
-//        editEmail.setText(user.getEmail());
-//        editPhone.setText(user.getNoTelpon());
-        Log.e("nama user", user.getNama());
-        Log.e("nama user", user.getEmail());
-        Log.e("nama user", user.getNoTelpon());
+        editNama.setText(user.getNama());
+        editEmail.setText(user.getEmail());
+        editPhone.setText(user.getNoTelpon());
+//        Log.e("nama user", user.getNama());
+//        Log.e("nama user", user.getEmail());
+//        Log.e("nama user", user.getNoTelpon());
     }
 
     @Override
